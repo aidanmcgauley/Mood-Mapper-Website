@@ -1,6 +1,8 @@
 Mood Mapper
 Mood Mapper is a web-based application designed to help users track and visualize their moods over time. Through a user-friendly interface, individuals can sign up, log their daily moods, and gain insights through graphical representations.
 
+![image](https://github.com/aidanmcgauley/Mood-Mapper-Website/assets/81173048/3656433e-9635-4b19-8c49-3031354da23c)
+
 Features
 User Authentication: Secure sign up and login functionality.
 Mood Logging: Users can record their moods daily, adding additional context or notes.
