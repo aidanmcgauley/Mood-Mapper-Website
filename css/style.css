@@ -1,0 +1,428 @@
+/* General styling */
+html{
+    margin: 0;
+}
+
+body{
+    
+    background: linear-gradient(135deg, rgba(200,140,249,0.5550595238095238) 0%, rgba(241,232,251,1) 50%, rgba(200,142,255,0.4066001400560224) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+h1, h2, h3, h4, h5{
+    color: #A297E5;
+}
+
+
+
+
+
+
+
+/* NAVBAR STYLING */
+.navbar{
+    background-color: #F8F5F8;
+}
+
+@media (max-width: 1200px) {
+    .navbar .nav-item .nav-link {
+      text-align: center;
+    }
+  }  
+
+/* Navbar height / logo size */
+/* Default size for larger screens */
+.logo {
+    width: 300px;
+    height: 75px;
+}
+/* Medium size when nav-link text is still stacked */
+@media (max-width: 950px) {
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+}
+/* Media query targeting mobile devices */
+@media (max-width: 768px) {
+    .logo {
+        width: 150px;
+        height: 37.5px;
+    }
+}
+
+.menuR{
+    padding-right: 5%;
+}
+.greet{
+    color: darkmagenta;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+
+
+
+
+
+/* INDEX PAGE */
+.index-container{
+    background-color: white;
+    border-style: solid;
+    border-color: #6e62bb;
+    border-width: 0.2rem;
+    border-radius: 0.5rem;
+    max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+    .index-container {
+        min-height: 100vh;
+        margin: 0; 
+        border-width: 0;
+        border-radius: 0;
+    }
+    
+}
+
+.arrow-img img{
+    width: 15%;
+    height: 15%;
+    margin-bottom: 1rem;
+}
+
+.image-border img {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+}
+
+
+
+
+
+
+
+/* MOOD LOG FORM */
+.q1-container{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.radio-buttons{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.custom-radio input{
+    display: none;
+}
+
+.radio-btn{
+    margin: 10px;
+    width: 100px;
+    height: 120px;
+    border: 3px solid transparent;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 20px #c3c3c375;
+    cursor: pointer;
+}
+
+.radio-btn > i {
+    color: #ffffff;
+    background-color: #A297E5;
+    font-size: 20px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(4);
+    border-radius: 50px;
+    padding: 3px;
+    transition: 0.2s;
+    pointer-events: none;
+    opacity: 0;
+}
+@media (max-width: 1199px) {
+    .radio-btn > i {
+        font-size: 15px;
+        top: -14px;
+    }
+}
+
+@media (max-width: 860px) {
+    .radio-btn > i {
+        font-size: 14px;
+        top: -12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .radio-btn > i {
+        font-size: 10px; 
+        top: -12px;
+    }
+}
+
+
+.radio-btn .face-img{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.face-img img {
+    width: 60px;
+    height: auto;
+}
+@media (max-width: 1199px) {
+    .radio-btn .face-img {
+        top: 70%; 
+    }
+}
+
+@media (max-width: 860px) {
+    .radio-btn .face-img {
+        top: 90%; 
+    }
+}
+
+@media (max-width: 576px) {
+    .radio-btn .face-img {
+        top: 105%; 
+    }
+}
+
+.radio-btn .face-img h5{
+    margin-top: 8%;
+    font-size: 1.3rem;
+}
+
+@media (min-width: 1200px) {
+    .face-img img {
+        width: 60px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1199px) {
+    .face-img img {
+        width: 50px;
+        height: auto;
+    }
+    .radio-btn .face-img h5 {
+        font-size: 1rem; 
+    }
+    .radio-btn{
+        margin: 10px;
+        width: 80px;
+        height: 96px;
+    }
+}
+@media (max-width: 860px) {
+    .face-img img {
+        width: 35px;
+        height: auto;
+    }
+    .radio-btn .face-img h5 {
+        font-size: 0.8rem; 
+    }
+    .radio-btn{
+        margin: 10px;
+        width: 65px;
+        height: 78px;
+    }
+}
+@media (max-width: 576px) {
+    .face-img img {
+        width: 20px;
+        height: auto;
+    }
+    .radio-btn .face-img h5 {
+        font-size: 0.6rem;
+    }
+    .radio-btn{
+        margin: 10px;
+        width: 50px;
+        height: 60px;
+    }
+}
+
+.custom-radio input:checked + .radio-btn {
+    border: 3px solid #A297E5;
+}
+
+.custom-radio input:checked + .radio-btn > i {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.trigger-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    max-width: 100%;
+}
+
+.form-check-inline {
+    flex: 1;
+    min-width: calc(33.333% - 30px);
+}
+@media (max-width: 576px) {
+    .form-check-inline{
+        flex: 1;
+        min-width: calc(33.333% - 10px);
+    }
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #6e62bb;
+    --bs-btn-border-color: #A297E5;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6e62bb;
+    --bs-btn-hover-border-color: #c9c2f5;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6e62bb;
+    --bs-btn-active-border-color: #6e62bb;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #6e62bb;
+    --bs-btn-disabled-border-color: #6e62bb;
+}
+
+.titleBorder{
+    background-color: #F8F5F8;
+    border-style: solid;
+    border-color: #6e62bb; 
+    border-width: 0.2rem;
+    border-radius: 1rem;
+}
+
+.formBorder{
+    background-color: #F8F5F8;
+    border-style: solid;
+    border-color: #6e62bb; 
+    border-width: 0.4rem;
+    border-radius: 2rem;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .formBorder {
+        height: 100vh;
+        margin: 0; 
+        border-width: 0;
+        border-radius: 0;
+    }
+    
+}
+
+.custom-container {
+    padding: 0; /* Set padding to 0 on mobile devices by default */
+}
+
+.custom-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+@media (min-width: 768px) {
+.custom-container {
+    padding-left: 15px; 
+    padding-right: 15px; 
+    }
+}
+@media (min-width: 768px) { 
+    .custom-margin {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+}
+
+.button:active{
+    transform: scale(0.98);
+}
+
+
+
+
+
+/* CARD STYLING */
+.container {
+    margin: 0 auto; 
+    padding: 0 10px; 
+  }
+  
+  .card {
+    margin-right: 10px; 
+  }
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-bottom-right-radius: 0px;
+}
+
+.card-footer{
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    /* Adjust the size of the buttons when narrowing */
+    .card-footer a.btn,
+    form button.btn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Ensure that the buttons stay within border of div */
+  .card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+  }
+
+  .card-text{
+    max-height: 24px;
+    text-overflow: clip;
+    overflow: hidden;
+  }
+
+  /* CSS for pagination buttons */
+  .pagination{
+    --bs-pagination-color: #6e62bb;
+    --bs-pagination-bg: white;
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #6e62bb;
+  }
+  
+
+
+
+
+
+/* CHARTS */
+  /* Chart buttons */
+  @media (max-width: 767.98px) {
+    .small-btn {
+        font-size: 0.5rem; 
+        padding: 0.4rem 0.5rem; 
+    }
+}
